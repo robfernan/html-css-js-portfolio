@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming</title>
+    <link rel="icon" href="profile.jpg" type="image/jpeg">
+    
+    <!-- 1. Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- 2. Global CSS -->
+    <link rel="stylesheet" href="src/css/global.css">
+
+    <!-- 3. Page Specific CSS -->
+    <link rel="stylesheet" href="src/css/pages/streaming.css">
+</head>
+<body>
+    <nav>
+        <div class="title">Streaming</div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="coding.html">Coding</a>
+            <a href="art.html">Art</a>
+            <a href="aviation.html">Aviation</a>
+            <a href="streaming.html">Streaming</a>
+        </div>
+        <button class="mode-toggle" onclick="toggleMode()">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <header>
+        <h1>Streaming</h1>
+        <p>Where I stream</p>
+    </header>
+
+    <main>
+        <div class="streaming-layout">
+            <!-- YouTube Section -->
+            <div class="youtube">
+                <h2>YouTube</h2>
+                <a href="https://www.youtube.com/@MungDaal321" target="_blank">
+                    <img src="assets/streaming/youtube-thumbnail-dark.jpg" alt="YouTube Thumbnail" class="thumbnail youtube-thumbnail">
+                </a>
+                <p>Check out my latest YouTube content and subscribe to my channel for updates!</p>
+                <a href="https://www.youtube.com/@MungDaal321" target="_blank" class="button">Visit YouTube</a>
+                <ul class="icons">
+                    <li><a href="https://www.youtube.com/@MungDaal321" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+      
+            <!-- Twitch Section -->
+            <div class="twitch">
+                <h2>Twitch</h2>
+                <a href="https://www.twitch.tv/mungdaal321" target="_blank">
+                    <img src="assets/streaming/twitch-thumbnail-dark.jpg" alt="Twitch Thumbnail" class="thumbnail twitch-thumbnail">
+                </a>
+                <p>Join my live streams on Twitch to catch the action in real-time!</p>
+                <a href="https://www.twitch.tv/mungdaal321" target="_blank" class="button">Visit Twitch</a>
+                <ul class="icons">
+                    <li><a href="https://www.twitch.tv/mungdaal321" target="_blank"><i class="fab fa-twitch"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Popular Videos Section -->
+        <div class="popular-content">
+            <h2>Popular Videos</h2>
+            
+            <p class="category">Gaming Videos</p>
+            <div class="content-thumbnails">
+                <div class="thumbnail-item">
+                    <a href="https://www.youtube.com/live/-Er2Pmy0HZI?si=rr01QQwgWI6XbJDb" target="_blank"><img src="assets/streaming/gameplay-video1.jpg" alt="Popular Video 1 of Last Day on Earth Gameplay"></a>
+                    <p class="thumbnail-description">Popular Video 1 of Last Day on Earth Gameplay</p>
+                </div>
+                <div class="thumbnail-item">
+                    <a href="https://youtu.be/eXnNIszUU7E?si=IPZ_z_-1IyRqVwnG" target="_blank"><img src="assets/streaming/gameplay-video2.jpg" alt="Popular Video 2 of theHunter Classic Gameplay"></a>
+                    <p class="thumbnail-description">Popular Video 2 of theHunter Classic Gameplay</p>
+                </div>
+                <div class="thumbnail-item">
+                    <a href="https://www.twitch.tv/videos/2303292671" target="_blank"><img src="assets/streaming/gameplay-video3.jpg" alt="Halloween Stream theHunter Classic"></a>
+                    <p class="thumbnail-description">Halloween Stream theHunter Classic</p>
+                </div>
+            </div>
+            
+            <p class="category">Drawing</p>
+            <div class="content-thumbnails">
+                <div class="thumbnail-item">
+                    <a href="https://youtu.be/-7a2JQIbCOk?si=gVuh0eYNBZvQ292f" target="_blank"><img src="assets/streaming/drawing-video.jpg" alt="Car Sketch Video"></a>
+                    <p class="thumbnail-description">Car Sketch Video</p>
+                </div>
+            </div>
+            
+            <p class="category">Coding</p>
+            <div class="content-thumbnails">
+                <div class="thumbnail-item">
+                    <a href="https://www.youtube.com/watch?v=qLEClZEXr68&t=11850s" target="_blank"><img src="assets/streaming/coding-video1.jpg" alt="Coding Video XMB in SFML"></a>
+                    <p class="thumbnail-description">Coding Video XMB in SFML</p>
+                </div>
+                <div class="thumbnail-item">
+                    <a href="https://www.twitch.tv/videos/2334965535" target="_blank"><img src="assets/streaming/coding-video2.jpg" alt="Coding in HTML and CSS Personal Website"></a>
+                    <p class="thumbnail-description">Coding in HTML and CSS Personal Website</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="src/js/global.js"></script>
+    <script src="src/js/pages/streaming.js"></script>
+</body>
+</html>

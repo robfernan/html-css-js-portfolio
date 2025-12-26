@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Projects</title>
+    <link rel="icon" href="profile.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="src/css/global.css">
+    <link rel="stylesheet" href="src/css/pages/coding.css">
+</head>
+<body>
+    <nav>
+        <div class="title">Coding</div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="coding.html">Coding</a>
+            <a href="art.html">Art</a>
+            <a href="aviation.html">Aviation</a>
+            <a href="streaming.html">Streaming</a>
+        </div>
+        <button class="mode-toggle" onclick="toggleMode()">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <header>
+        <h1>Code & Projects</h1>
+        <p>Software Developer &amp; Designer</p>
+        <hr class="hr">
+    </header>
+
+    <main class="container">
+      <section class="about-me section">
+        <h2>About Me</h2>
+        <p>
+          As a passionate software developer and designer, I blend my
+          technical expertise with my creativity to create engaging
+          applications and experiences whether on digital media or on
+          physical.
+        </p>
+      </section>
+
+      <!-- FILTER BUTTONS -->
+      <div class="filter-buttons">
+        <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+        <button class="filter-btn" onclick="filterProjects('web')">Web & Frameworks</button>
+        <button class="filter-btn" onclick="filterProjects('game')">Game Dev</button>
+        <button class="filter-btn" onclick="filterProjects('cpp')">C++ & SFML</button>
+        <button class="filter-btn" onclick="filterProjects('retro')">Retro & Embedded</button>
+      </div>
+
+      <section id="projects">
+        
+        <!-- Featured Projects -->
+        <h3 style="color: var(--accent-color); margin-top: 30px;">⭐ Featured Projects</h3>
+        <ul class="project-list">
+          <li class="project-item" data-category="web featured">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-code"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Nero.js — Universal JavaScript Framework</strong>
+                <span class="project-status status-github">GitHub</span>
+              </p>
+              <p>Cross-platform framework supporting PS2, PSP, PS3, Web, Desktop (NW.js), and Mobile (Capacitor). Write once, deploy everywhere.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Cross-platform</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/robfernan/nero-js" target="_blank" class="project-link">
+                  <i class="fab fa-github"></i>View on GitHub
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="web aviation featured">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-plane"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>AviationPro — Professional Flight Planning Suite</strong>
+                <span class="project-status status-live">Live</span>
+              </p>
+              <p>Production-grade aviation software built with React, TypeScript, and Tailwind CSS. Features flight planning, CX-6 computer, weather tools, and performance calculations.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Tailwind CSS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/robfernan/AviationPro" target="_blank" class="project-link">
+                  <i class="fab fa-github"></i>View on GitHub
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="game featured">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-gamepad"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Hopeless Catch — Pixel Art Fishing Horror Game</strong>
+                <span class="project-status status-live">Published</span>
+              </p>
+              <p>Published game with atmospheric storytelling. A peaceful fishing adventure with a subtle secret.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Love2D</span>
+                <span class="tech-tag">Lua</span>
+                <span class="tech-tag">Pixel Art</span>
+              </div>
+              <div class="project-links">
+                <a href="https://mungdaal321.itch.io/hopeless-catch" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>Play on itch.io
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- HTML/CSS/JS Web Projects -->
+        <h3 style="margin-top: 30px;">HTML / CSS / JavaScript</h3>
+        <ul class="project-list">
+          <li class="project-item" data-category="web">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-wave-square"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>XMB Wave Menu</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Horizontal menu with wave animations and dynamic theming</p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="web">
+            <div class="project-image">
+              <img src="assets/coding/flwindow.jpg" alt="FL Window & Door" class="project-thumbnail">
+            </div>
+            <div class="project-description">
+              <p><strong>FL Window & Door Maintenance Landing Page</strong>
+                <span class="project-status status-live">Live</span>
+              </p>
+              <p>Professional service landing page</p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="web">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-home"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>MG Gutters Landing Page</strong>
+                <span class="project-status status-live">Live</span>
+              </p>
+              <p>Service-focused landing page</p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="web">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-utensils"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Restaurant Website</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Full landing page with menu and booking</p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="web">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-id-card"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Business Card Builder</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Interactive business card design tool</p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="web">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-file-alt"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Resume Generator</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Dynamic resume creation and export</p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="web">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-receipt"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Invoice Generator</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Professional invoice creation tool</p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="web">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-file-pdf"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>PDF Editor</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Document editing and manipulation</p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="game web">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-gamepad"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Game Templates</strong>
+                <span class="project-status status-demo">Multiple</span>
+              </p>
+              <p>Platformer, Space Invaders, Crossy Road clones</p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">Canvas</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="web">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fab fa-free-code-camp"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>FreeCodeCamp Projects</strong>
+                <span class="project-status status-demo">Multiple</span>
+              </p>
+              <p>Calculator, Tic Tac Toe, Survey, Technical Documentation, Landing Page, Menu</p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Nero.JS Framework -->
+        <h3 style="margin-top: 30px;">Nero.JS Framework</h3>
+        <ul class="project-list">
+          <li class="project-item" data-category="web framework">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-layer-group"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Nero.js Core</strong>
+                <span class="project-status status-github">GitHub</span>
+              </p>
+              <p>Universal component-based framework for cross-platform development</p>
+              <div class="tech-stack">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Framework</span>
+                <span class="tech-tag">Cross-platform</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/robfernan/nero-js" target="_blank" class="project-link">
+                  <i class="fab fa-github"></i>View on GitHub
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- NW.JS Desktop Development -->
+        <h3 style="margin-top: 30px;">NW.JS Desktop Development</h3>
+        <ul class="project-list">
+          <li class="project-item" data-category="web desktop">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-desktop"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>XMB HTML Project</strong>
+                <span class="project-status status-demo">Desktop</span>
+              </p>
+              <p>Full XMB interface ported to desktop with NW.js</p>
+              <div class="tech-stack">
+                <span class="tech-tag">NW.js</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">Desktop</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Capacitor Mobile Development -->
+        <h3 style="margin-top: 30px;">Capacitor Mobile Development</h3>
+        <ul class="project-list">
+          <li class="project-item" data-category="web mobile">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>XMB HTML Project (Mobile)</strong>
+                <span class="project-status status-demo">Mobile</span>
+              </p>
+              <p>XMB interface adapted for mobile with Capacitor</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Capacitor</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">Mobile</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Web Development with Bolt & Copilot -->
+        <h3 style="margin-top: 30px;">Web Development with Bolt & Copilot</h3>
+        <ul class="project-list">
+          <li class="project-item" data-category="web aviation">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-plane"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>AviationPro Flight Planning Suite</strong>
+                <span class="project-status status-live">Live</span>
+              </p>
+              <p>Professional aviation application with advanced features</p>
+              <div class="tech-stack">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Bolt</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="web retro">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-book-open"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>PSP Digital Comics</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Comic reader interface for PSP</p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">PSP UI</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="web retro">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-tv"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>PS3 XMB Layout</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Animated XMB interface with dynamic backgrounds</p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">XMB</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="web">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-briefcase"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Portfolio Websites</strong>
+                <span class="project-status status-demo">Multiple</span>
+              </p>
+              <p>Multiple portfolio design variations</p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">Portfolio</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Web Development with Lovable & Copilot -->
+        <h3 style="margin-top: 30px;">Web Development with Lovable & Copilot</h3>
+        <ul class="project-list">
+          <li class="project-item" data-category="web retro">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-record-vinyl"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Music Player with Vinyl/Cassette/MiniDisc Themes</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Retro-styled audio player</p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">Retro UI</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="web">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-palette"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Modernized Portfolio</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Contemporary portfolio design</p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">Modern UI</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="web retro">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-book-reader"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>PSP Digital Comics (Ember UI)</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Comics reader with Ember UI recreation</p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">Ember UI</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="web retro">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fab fa-windows"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Windows 95 Desktop Environment</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Nostalgic desktop simulator with music player and visualizer</p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">Win95 UI</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="web">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-building"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>PhantomOffer / PhantomPipeline</strong>
+                <span class="project-status status-demo">In Development</span>
+              </p>
+              <p>Job/company rating platform (in development)</p>
+              <div class="tech-stack">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Platform</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="web">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-microphone"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>SonicCipher</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Secure audio recorder application</p>
+              <div class="tech-stack">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">Web Audio</span>
+                <span class="tech-tag">Security</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- SFML with C++ -->
+        <h3 style="margin-top: 30px;">SFML with C++</h3>
+        <ul class="project-list">
+          <li class="project-item" data-category="cpp">
+            <div class="project-image">
+              <img src="assets/coding/comic_book_reader_sfml.png" alt="SFML Comic Reader" class="project-thumbnail">
+            </div>
+            <div class="project-description">
+              <p><strong>Comic Book Reader (UI Project)</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Browse collection, recently added, unread, bookmarks, and options menu.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">SFML</span>
+                <span class="tech-tag">UI Design</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="cpp">
+            <div class="project-image">
+              <img src="assets/coding/music_player_sfml.png" alt="SFML Music Player" class="project-thumbnail">
+            </div>
+            <div class="project-description">
+              <p><strong>Music Player</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Audio playback, library/playlist system integration.</p>
+              <div class="tech-stack">
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">SFML</span>
+                <span class="tech-tag">Audio</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="cpp">
+            <div class="project-image">
+              <img src="assets/coding/xmb_launcher_sfml.png" alt="XMB Launcher" class="project-thumbnail">
+            </div>
+            <div class="project-description">
+              <p><strong>XMB Launcher</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Earlier XMB version with icon placeholders and wave animations</p>
+              <div class="tech-stack">
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">SFML</span>
+                <span class="tech-tag">UI/UX</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="cpp">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-cube"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>3D Graphics Projects</strong>
+                <span class="project-status status-demo">Multiple</span>
+              </p>
+              <p>Rotating pyramid, triangle rendering, fluid simulation (lava lamp), wave animations, 3D teapot with rotation</p>
+              <div class="tech-stack">
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">SFML</span>
+                <span class="tech-tag">3D Graphics</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Love2D with Lua -->
+        <h3 style="margin-top: 30px;">Love2D with Lua</h3>
+        <ul class="project-list">
+          <li class="project-item" data-category="game">
+            <div class="project-image">
+              <img src="assets/coding/music_player_love2d.png" alt="Love2D Music Player" class="project-thumbnail">
+            </div>
+            <div class="project-description">
+              <p><strong>Music Player</strong>
+                <span class="project-status status-demo">Cross-platform</span>
+              </p>
+              <p>Play button, volume sliders, progress bar. Cross-platform (Mac/Linux/Windows/Web).</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Love2D</span>
+                <span class="tech-tag">Lua</span>
+                <span class="tech-tag">Audio</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="game">
+            <div class="project-image">
+              <img src="assets/coding/note_editor_love2d.png" alt="Love2D Note Editor" class="project-thumbnail">
+            </div>
+            <div class="project-description">
+              <p><strong>Note Editor</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Line numbering and text entry functionality</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Love2D</span>
+                <span class="tech-tag">Lua</span>
+                <span class="tech-tag">Text Editor</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="game">
+            <div class="project-image">
+              <img src="assets/coding/comic_book_reader_love2d.png" alt="Love2D Comic Reader" class="project-thumbnail">
+            </div>
+            <div class="project-description">
+              <p><strong>Comic Reader</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Two-page display for comics</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Love2D</span>
+                <span class="tech-tag">Lua</span>
+                <span class="tech-tag">UI</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="game">
+            <div class="project-image">
+              <img src="assets/coding/key_logger_love2d.png" alt="Love2D Key Logger" class="project-thumbnail">
+            </div>
+            <div class="project-description">
+              <p><strong>Key Logger</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Real-time key press logging</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Love2D</span>
+                <span class="tech-tag">Lua</span>
+                <span class="tech-tag">Input</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="game">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-ghost"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Christmas Top-Down Horror Game</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Festive-themed horror game concept</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Love2D</span>
+                <span class="tech-tag">Lua</span>
+                <span class="tech-tag">Horror</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="game aviation">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-plane"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Aviation Projects</strong>
+                <span class="project-status status-demo">Multiple</span>
+              </p>
+              <p>Flight Log, Weather, Weight & Balance, Platformer Game, PSP Clock Screen Saver, Solitaire Style, Winamp Clone, Jet Pack Joyride Clone</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Love2D</span>
+                <span class="tech-tag">Lua</span>
+                <span class="tech-tag">Aviation</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Unity -->
+        <h3 style="margin-top: 30px;">Unity</h3>
+        <ul class="project-list">
+          <li class="project-item" data-category="game">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-music"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Music Player</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Audio playback in Unity</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Unity</span>
+                <span class="tech-tag">C#</span>
+                <span class="tech-tag">Audio</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="game">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-car"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Car Game</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Vehicle mechanics and gameplay</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Unity</span>
+                <span class="tech-tag">C#</span>
+                <span class="tech-tag">Physics</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Godot -->
+        <h3 style="margin-top: 30px;">Godot</h3>
+        <ul class="project-list">
+          <li class="project-item" data-category="game">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-music"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Music Player</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Audio playback in Godot</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Godot</span>
+                <span class="tech-tag">GDScript</span>
+                <span class="tech-tag">Audio</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Defold -->
+        <h3 style="margin-top: 30px;">Defold</h3>
+        <ul class="project-list">
+          <li class="project-item" data-category="game">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-music"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Music Player</strong>
+                <span class="project-status status-demo">Cross-platform</span>
+              </p>
+              <p>Cross-platform music player (Mac/Linux/Windows/Web)</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Defold</span>
+                <span class="tech-tag">Lua</span>
+                <span class="tech-tag">Audio</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Android Watch Face Studio -->
+        <h3 style="margin-top: 30px;">Android Watch Face Studio</h3>
+        <ul class="project-list">
+          <li class="project-item" data-category="retro mobile">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-clock"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Custom Watch Face</strong>
+                <span class="project-status status-live">Published</span>
+              </p>
+              <p>First watch face created June 8, 2023</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Android</span>
+                <span class="tech-tag">Watch Face</span>
+                <span class="tech-tag">Wearables</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- PSP Development -->
+        <h3 style="margin-top: 30px;">PSP Development</h3>
+        
+        <h4 style="color: var(--text-color); margin-top: 20px; margin-bottom: 10px;">Minimalist SDK</h4>
+        <ul class="project-list">
+          <li class="project-item" data-category="retro">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-code"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Hello World</strong>
+                <span class="project-status status-demo">Basic</span>
+              </p>
+              <p>Basic PSP program</p>
+              <div class="tech-stack">
+                <span class="tech-tag">PSP</span>
+                <span class="tech-tag">C</span>
+                <span class="tech-tag">Homebrew</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="retro">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-font"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>String with Different Text Color</strong>
+                <span class="project-status status-demo">Tutorial</span>
+              </p>
+              <p>Text rendering tutorial</p>
+              <div class="tech-stack">
+                <span class="tech-tag">PSP</span>
+                <span class="tech-tag">C</span>
+                <span class="tech-tag">Graphics</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <h4 style="color: var(--text-color); margin-top: 20px; margin-bottom: 10px;">PSPSDK Development</h4>
+        <ul class="project-list">
+          <li class="project-item" data-category="retro">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-terminal"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>hello_world_psp</strong>
+                <span class="project-status status-demo">Basic</span>
+              </p>
+              <p>Minimal Hello World using C and PSPSDK</p>
+              <div class="tech-stack">
+                <span class="tech-tag">PSPSDK</span>
+                <span class="tech-tag">C</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="retro">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-square"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>drawing_square_psp</strong>
+                <span class="project-status status-demo">Graphics</span>
+              </p>
+              <p>Red rectangle on white background using SDL2</p>
+              <div class="tech-stack">
+                <span class="tech-tag">PSPSDK</span>
+                <span class="tech-tag">SDL2</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="retro">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-gamepad"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>drawing_input_psp</strong>
+                <span class="project-status status-demo">Input</span>
+              </p>
+              <p>Controller input reading and shape drawing</p>
+              <div class="tech-stack">
+                <span class="tech-tag">PSPSDK</span>
+                <span class="tech-tag">Input</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="retro">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-image"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>drawing_sprite_psp</strong>
+                <span class="project-status status-demo">Graphics</span>
+              </p>
+              <p>Sprite loading and display with SDL2_image</p>
+              <div class="tech-stack">
+                <span class="tech-tag">PSPSDK</span>
+                <span class="tech-tag">SDL2</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="retro">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-volume-up"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>audio_psp</strong>
+                <span class="project-status status-demo">Audio</span>
+              </p>
+              <p>WAV/OGG/MP3 playback using PSP audio or SDL2_mixer</p>
+              <div class="tech-stack">
+                <span class="tech-tag">PSPSDK</span>
+                <span class="tech-tag">Audio</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="retro">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-square"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>sdl_square_psp</strong>
+                <span class="project-status status-demo">SDL2</span>
+              </p>
+              <p>SDL2 green square with input handling</p>
+              <div class="tech-stack">
+                <span class="tech-tag">PSPSDK</span>
+                <span class="tech-tag">SDL2</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="retro">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-image"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>sdl_image_psp</strong>
+                <span class="project-status status-demo">Graphics</span>
+              </p>
+              <p>PNG image loading and display with SDL2_image</p>
+              <div class="tech-stack">
+                <span class="tech-tag">PSPSDK</span>
+                <span class="tech-tag">SDL2</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="retro">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-music"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>sdl_mixer_psp</strong>
+                <span class="project-status status-demo">Audio</span>
+              </p>
+              <p>Background music playback with pause/resume using SDL2_mixer</p>
+              <div class="tech-stack">
+                <span class="tech-tag">PSPSDK</span>
+                <span class="tech-tag">SDL2</span>
+              </div>
+            </div>
+          </li>
+          <li class="project-item" data-category="retro">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-font"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>sdl_ttf_psp</strong>
+                <span class="project-status status-demo">Text</span>
+              </p>
+              <p>TrueType font rendering with SDL2_ttf</p>
+              <div class="tech-stack">
+                <span class="tech-tag">PSPSDK</span>
+                <span class="tech-tag">SDL2</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- PS1 Development -->
+        <h3 style="margin-top: 30px;">PS1 Development with MIPS Assembly</h3>
+        <ul class="project-list">
+          <li class="project-item" data-category="retro">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-microchip"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Pikuma Course Projects</strong>
+                <span class="project-status status-demo">Course</span>
+              </p>
+              <p>Background color manipulation, triangle & quad rendering, Gouraud shading for triangles</p>
+              <div class="tech-stack">
+                <span class="tech-tag">PS1</span>
+                <span class="tech-tag">MIPS</span>
+                <span class="tech-tag">Assembly</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- PS2 Development -->
+        <h3 style="margin-top: 30px;">PS2 Bare Metal with C</h3>
+        <ul class="project-list">
+          <li class="project-item" data-category="retro">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-cogs"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Bare Metal PS2 Project</strong>
+                <span class="project-status status-demo">In Progress</span>
+              </p>
+              <p>Low-level PS2 development (currently running, visual output in progress)</p>
+              <div class="tech-stack">
+                <span class="tech-tag">PS2</span>
+                <span class="tech-tag">C</span>
+                <span class="tech-tag">Bare Metal</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Game Boy Development -->
+        <h3 style="margin-top: 30px;">Game Boy Assembly</h3>
+        <ul class="project-list">
+          <li class="project-item" data-category="retro">
+            <div class="project-image">
+              <div class="project-placeholder">
+                <i class="fas fa-gamepad"></i>
+              </div>
+            </div>
+            <div class="project-description">
+              <p><strong>Loading Screen</strong>
+                <span class="project-status status-demo">Demo</span>
+              </p>
+              <p>Game Boy assembly program with loading screen display</p>
+              <div class="tech-stack">
+                <span class="tech-tag">Game Boy</span>
+                <span class="tech-tag">Assembly</span>
+                <span class="tech-tag">Z80</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+      </section>
+    </main>
+
+    <script src="src/js/global.js"></script>
+    <script src="src/js/pages/coding.js"></script>
+</body>
+</html>

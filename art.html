@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art - Robert Fernandez</title>
+    <link rel="icon" href="profile.jpg" type="image/jpeg">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="src/css/global.css">
+    <link rel="stylesheet" href="src/css/pages/art.css">
+    
+    <!-- 3D Viewer Script -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+</head>
+<body class="art-page">
+    <nav>
+        <div class="title">Art & Design</div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="coding.html">Coding</a>
+            <a href="art.html">Art</a>
+            <a href="aviation.html">Aviation</a>
+            <a href="streaming.html">Streaming</a>
+        </div>
+        <button class="mode-toggle" onclick="toggleMode()">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <header>
+        <h1>Creative Works</h1>
+        <p>Digital Art • 3D Modeling • Game Assets</p>
+        <div class="status-badge"><span class="status-dot"></span>Open for Commissions</div>
+    </header>
+
+    <main class="content art-content">
+        
+        <!-- 1. THE NETWORK (Banner Cards) -->
+        <section class="timeline-item visible">
+            <h2 class="section-title">The Network</h2>
+            <div class="platform-grid">
+                <!-- ArtStation -->
+                <a href="https://www.artstation.com/robertfernandez7" target="_blank" class="platform-card">
+                    <img src="assets/art/artstation-thumbnail.png" alt="ArtStation Portfolio">
+                    <h3>ArtStation</h3><span>3D Models & Renders</span>
+                </a>
+                
+                <!-- DeviantArt -->
+                <a href="https://www.deviantart.com/rober321" target="_blank" class="platform-card">
+                    <img src="assets/art/deviantart-thumbnail.png" alt="DeviantArt Gallery">
+                    <h3>DeviantArt</h3><span>Sketches & Concepts</span>
+                </a>
+
+                <!-- Itch.io -->
+                <a href="https://mungdaal321.itch.io/" target="_blank" class="platform-card">
+                    <img src="assets/art/itch-thumbnail.png" alt="Itch.io Games">
+                    <h3>Itch.io</h3><span>Game Assets & Demos</span>
+                </a>
+
+                <!-- Pinterest -->
+                <a href="https://www.pinterest.com/fernandez7466/" target="_blank" class="platform-card">
+                    <img src="assets/art/pinterest-thumbnail.png" alt="Pinterest Boards">
+                    <h3>Pinterest</h3><span>Mood Boards & Refs</span>
+                </a>
+                
+                <!-- Behance -->
+                <a href="https://www.behance.net/robertfern5088" target="_blank" class="platform-card">
+                    <img src="assets/art/behance-thumbnail.png" alt="Behance Projects">
+                    <h3>Behance</h3><span>UI/UX Design</span>
+                </a>
+                
+                <!-- WordPress -->
+                <a href="https://robertfernandez1.wordpress.com/art/" target="_blank" class="platform-card">
+                    <img src="assets/art/wordpress-thumbnail.png" alt="WordPress Blog">
+                    <h3>WordPress</h3><span>Design Blog</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. PROCESS LAB (Slider) -->
+        <section class="timeline-item" style="margin-top: 60px;">
+            <h2 class="section-title">Process Lab</h2>
+            <p style="text-align:center;">Drag to see the evolution.</p>
+            <div class="comparison-slider">
+                <img src="assets/art/car-art.jpg" alt="Final Render">
+                <!-- Simulated Sketch Layer -->
+                <div class="img-foreground" style="background-image: url('assets/art/car-art.jpg'); background-size: cover; filter: grayscale(100%) contrast(1.2) brightness(1.2);"></div>
+                <div class="slider-handle"><i class="fas fa-arrows-alt-h" style="color:white;"></i></div>
+                <input type="range" min="0" max="100" value="50" class="slider-input">
+            </div>
+        </section>
+
+        <!-- 3. 3D WORKSHOP -->
+        <section class="timeline-item" style="margin-top: 60px;">
+            <h2 class="section-title">3D Workshop</h2>
+            <p style="text-align:center;">Interactive Asset Preview</p>
+            <model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" alt="3D Model" auto-rotate camera-controls shadow-intensity="1"></model-viewer>
+        </section>
+
+        <!-- 4. GALLERY PREVIEW (Updated) -->
+        <section class="gallery-section timeline-item" style="margin-top: 60px;">
+            <h2 class="section-title">Gallery Preview</h2>
+            <div class="gallery-grid">
+                <!-- Car Art -->
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="assets/art/car-art.jpg" alt="Classic Car Art">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <!-- Love2D UI -->
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="assets/art/love2d_music_player.png" alt="Love2D UI Design">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <!-- SFML Comic Reader -->
+                <div class="gallery-item" onclick="openLightbox(this)">
+                    <img src="assets/art/comic_book_reader_sfml.png" alt="SFML App Design">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+            <span class="close-btn">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <div id="caption"></div>
+        </div>
+    </main>
+    
+    <script src="src/js/global.js"></script>
+    <script src="src/js/pages/art.js"></script>
+</body>
+</html>

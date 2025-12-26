@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviation - Robert Fernandez</title>
+    <link rel="icon" href="profile.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="src/css/global.css">
+    <link rel="stylesheet" href="src/css/pages/aviation.css">
+</head>
+<body>
+    <nav>
+        <div class="title">Robert Fernandez</div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="coding.html">Coding</a>
+            <a href="art.html">Art</a>
+            <a href="aviation.html">Aviation</a>
+            <a href="streaming.html">Streaming</a>
+        </div>
+        <button class="mode-toggle" onclick="toggleMode()">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <header>
+        <h1>Aviation Hub</h1>
+        <p>Pre-Flight Planning & Flight Utilities</p>
+        <div class="status-indicator">
+            <span class="status-dot"></span>
+            <span>Student Pilot in Training</span>
+        </div>
+    </header>
+
+    <div class="content">
+        
+        <!-- Calculators & Resources Grid -->
+        <div class="aviation-grid">
+            
+            <!-- Cloud Base Calculator -->
+            <div class="instrument-card">
+                <div class="instrument-header">
+                    <i class="fas fa-cloud"></i> Cloud Base Calculator
+                </div>
+                <div class="calc-row">
+                    <label for="temperature">Temperature (°C)</label>
+                    <input type="number" id="temperature" placeholder="e.g., 25" step="0.1">
+                </div>
+                <div class="calc-row">
+                    <label for="dew-point">Dew Point (°C)</label>
+                    <input type="number" id="dew-point" placeholder="e.g., 22" step="0.1">
+                </div>
+                <button onclick="calculateCloudBase()" class="calc-btn">
+                    <i class="fas fa-calculator"></i> Calculate
+                </button>
+                <div id="result" class="calc-result" style="display:none;"></div>
+            </div>
+
+            <!-- Pressure Altitude Calculator -->
+            <div class="instrument-card">
+                <div class="instrument-header">
+                    <i class="fas fa-tachometer-alt"></i> Pressure Altitude
+                </div>
+                <div class="calc-row">
+                    <label for="altimeter-setting">Altimeter Setting (inHg)</label>
+                    <input type="number" step="0.01" id="altimeter-setting" placeholder="e.g., 29.92">
+                </div>
+                <div class="calc-row">
+                    <label for="current-altitude">Field Elevation (ft)</label>
+                    <input type="number" id="current-altitude" placeholder="e.g., 1000">
+                </div>
+                <button onclick="calculatePressureAltitude()" class="calc-btn">
+                    <i class="fas fa-calculator"></i> Calculate
+                </button>
+                <div id="pressure-result" class="calc-result" style="display:none;"></div>
+            </div>
+
+            <!-- Crosswind Calculator -->
+            <div class="instrument-card">
+                <div class="instrument-header">
+                    <i class="fas fa-wind"></i> Crosswind Component
+                </div>
+                <div class="calc-row">
+                    <label for="runway-heading">Runway Heading (°)</label>
+                    <input type="number" id="runway-heading" placeholder="e.g., 180" min="0" max="360">
+                </div>
+                <div class="calc-row">
+                    <label for="wind-direction">Wind Direction (°)</label>
+                    <input type="number" id="wind-direction" placeholder="e.g., 200" min="0" max="360">
+                </div>
+                <div class="calc-row">
+                    <label for="wind-speed">Wind Speed (knots)</label>
+                    <input type="number" id="wind-speed" placeholder="e.g., 15" step="0.1">
+                </div>
+                <button onclick="calculateCrosswind()" class="calc-btn">
+                    <i class="fas fa-calculator"></i> Calculate
+                </button>
+                <div id="crosswind-result" class="calc-result" style="display:none;"></div>
+            </div>
+
+            <!-- Density Altitude Calculator -->
+            <div class="instrument-card">
+                <div class="instrument-header">
+                    <i class="fas fa-mountain"></i> Density Altitude
+                </div>
+                <div class="calc-row">
+                    <label for="field-elevation">Field Elevation (ft)</label>
+                    <input type="number" id="field-elevation" placeholder="e.g., 500">
+                </div>
+                <div class="calc-row">
+                    <label for="oat">Outside Air Temp (°C)</label>
+                    <input type="number" id="oat" placeholder="e.g., 25" step="0.1">
+                </div>
+                <button onclick="calculateDensityAltitude()" class="calc-btn">
+                    <i class="fas fa-calculator"></i> Calculate
+                </button>
+                <div id="density-result" class="calc-result" style="display:none;"></div>
+            </div>
+
+            <!-- TAS Calculator -->
+            <div class="instrument-card">
+                <div class="instrument-header">
+                    <i class="fas fa-speedometer-alt"></i> True Airspeed (TAS)
+                </div>
+                <div class="calc-row">
+                    <label for="ias">Indicated Airspeed (knots)</label>
+                    <input type="number" id="ias" placeholder="e.g., 100" step="0.1">
+                </div>
+                <div class="calc-row">
+                    <label for="altitude-tas">Altitude (ft)</label>
+                    <input type="number" id="altitude-tas" placeholder="e.g., 5000">
+                </div>
+                <div class="calc-row">
+                    <label for="oat-tas">Outside Air Temp (°C)</label>
+                    <input type="number" id="oat-tas" placeholder="e.g., 10" step="0.1">
+                </div>
+                <button onclick="calculateTAS()" class="calc-btn">
+                    <i class="fas fa-calculator"></i> Calculate
+                </button>
+                <div id="tas-result" class="calc-result" style="display:none;"></div>
+            </div>
+
+            <!-- Fuel Calculator -->
+            <div class="instrument-card">
+                <div class="instrument-header">
+                    <i class="fas fa-gas-pump"></i> Fuel Calculator
+                </div>
+                <div class="calc-row">
+                    <label for="fuel-burn-rate">Fuel Burn Rate (gal/hr)</label>
+                    <input type="number" id="fuel-burn-rate" placeholder="e.g., 8.5" step="0.1">
+                </div>
+                <div class="calc-row">
+                    <label for="flight-time">Flight Time (hours)</label>
+                    <input type="number" id="flight-time" placeholder="e.g., 2.5" step="0.1">
+                </div>
+                <div class="calc-row">
+                    <label for="reserve-percent">Reserve Fuel (%)</label>
+                    <input type="number" id="reserve-percent" placeholder="e.g., 45" min="0" max="100">
+                </div>
+                <button onclick="calculateFuel()" class="calc-btn">
+                    <i class="fas fa-calculator"></i> Calculate
+                </button>
+                <div id="fuel-result" class="calc-result" style="display:none;"></div>
+            </div>
+
+            <!-- Time/Distance/Groundspeed Calculator -->
+            <div class="instrument-card">
+                <div class="instrument-header">
+                    <i class="fas fa-route"></i> Time/Distance/GS
+                </div>
+                <div class="calc-row">
+                    <label for="distance-nm">Distance (NM)</label>
+                    <input type="number" id="distance-nm" placeholder="e.g., 100" step="0.1">
+                </div>
+                <div class="calc-row">
+                    <label for="groundspeed">Groundspeed (knots)</label>
+                    <input type="number" id="groundspeed" placeholder="e.g., 120" step="0.1">
+                </div>
+                <button onclick="calculateTimeDistance()" class="calc-btn">
+                    <i class="fas fa-calculator"></i> Calculate
+                </button>
+                <div id="time-distance-result" class="calc-result" style="display:none;"></div>
+            </div>
+        </div>
+
+        <!-- Live Weather Section -->
+        <div class="content" style="margin-top: 40px;">
+            <!-- Live Weather Widget -->
+            <div class="metar-widget" style="margin-bottom: 30px;">
+                <div style="flex: 1;">
+                    <h3>
+                        <i class="fas fa-satellite-dish"></i> Live METAR (KF45 - North Palm Beach)
+                    </h3>
+                    <p style="font-size: 0.9rem; opacity: 0.8;">Real-time weather data from metar-taf.com</p>
+                    <a href="https://metar-taf.com/metar/KF45" id="metartaf-1x71tc73" class="metar-link">METAR North Palm Beach County General Aviation Airport</a>
+                    <script async defer crossorigin="anonymous" src="https://metar-taf.com/embed-js/KF45?bg_color=000000&visibility=mi&qnh=inHg&rh=rh&target=1x71tc73"></script>
+                </div>
+            </div>
+
+
+        <!-- VFR Weather Minimums Section -->
+        <div class="content" style="margin-top: 20px;">
+            <div class="instrument-header">
+                <i class="fas fa-cloud-sun"></i> VFR Weather Minimums Reference
+            </div>
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; font-size: 0.85rem; margin-top: 10px;">
+                    <thead>
+                        <tr>
+                            <th>Airspace</th>
+                            <th>Ceiling</th>
+                            <th>Visibility</th>
+                            <th>Distance from Cloud</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Class A</strong></td>
+                            <td colspan="3" style="text-align: center; font-style: italic;">IFR Only</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Class B</strong></td>
+                            <td>3,000 ft</td>
+                            <td>3 SM</td>
+                            <td>500 ft below, 1,000 ft above, 2,000 ft horizontal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Class C</strong></td>
+                            <td>3,000 ft</td>
+                            <td>3 SM</td>
+                            <td>500 ft below, 1,000 ft above, 2,000 ft horizontal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Class D</strong></td>
+                            <td>2,000 ft</td>
+                            <td>3 SM</td>
+                            <td>500 ft below, 1,000 ft above, 2,000 ft horizontal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Class E (Day)</strong></td>
+                            <td>3,000 ft</td>
+                            <td>3 SM</td>
+                            <td>1,000 ft below, 1,000 ft above, 1 SM horizontal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Class E (Night)</strong></td>
+                            <td>3,000 ft</td>
+                            <td>5 SM</td>
+                            <td>1,000 ft below, 1,000 ft above, 1 SM horizontal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Class G (Day, <1,200 ft)</strong></td>
+                            <td>1,000 ft</td>
+                            <td>1 SM</td>
+                            <td>Clear of clouds</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Class G (Night, <1,200 ft)</strong></td>
+                            <td>1,000 ft</td>
+                            <td>3 SM</td>
+                            <td>500 ft below, 1,000 ft above, 2,000 ft horizontal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Class G (1,200-10,000 ft Day)</strong></td>
+                            <td>1,000 ft</td>
+                            <td>3 SM</td>
+                            <td>500 ft below, 1,000 ft above, 2,000 ft horizontal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Class G (1,200-10,000 ft Night)</strong></td>
+                            <td>1,000 ft</td>
+                            <td>5 SM</td>
+                            <td>500 ft below, 1,000 ft above, 2,000 ft horizontal</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+            <!-- Flight Planning -->
+            <div class="instrument-card">
+                <div class="instrument-header">
+                    <i class="fas fa-briefcase"></i> Flight Planning
+                </div>
+                <a href="https://plan.foreflight.com/" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-route"></i> ForeFlight Web
+                </a>
+                <a href="https://pilotweb.garmin.com/" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-plane-departure"></i> Garmin Pilot Web
+                </a>
+                <a href="https://skyvector.com/" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-map"></i> SkyVector Charts
+                </a>
+                <a href="https://www.fltplan.com/" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-clipboard-list"></i> FltPlan.com
+                </a>
+            </div>
+
+            <!-- Weather Resources -->
+            <div class="instrument-card">
+                <div class="instrument-header">
+                    <i class="fas fa-cloud-sun-rain"></i> Weather Briefing
+                </div>
+                <a href="https://www.aviationweather.gov/" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-cloud-sun"></i> Aviation Weather Center
+                </a>
+                <a href="https://www.1800wxbrief.com/" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-file-contract"></i> 1800-WX-BRIEF
+                </a>
+                <a href="https://www.aviationweather.gov/metar" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-wind"></i> METAR/TAF
+                </a>
+                <a href="https://www.aviationweather.gov/gfa/" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-map-marked-alt"></i> Graphical Forecasts
+                </a>
+            </div>
+
+            <!-- Charts & References -->
+            <div class="instrument-card">
+                <div class="instrument-header">
+                    <i class="fas fa-book-open"></i> Charts & References
+                </div>
+                <a href="https://www.faa.gov/air_traffic/flight_info/aeronav/" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-book"></i> FAA Aeronav
+                </a>
+                <a href="https://www.airnav.com/" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-info-circle"></i> AirNav Airport Info
+                </a>
+                <a href="https://notams.aim.faa.gov/notamSearch/" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-exclamation-triangle"></i> NOTAM Search
+                </a>
+                <a href="https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-graduation-cap"></i> FAA Handbooks
+                </a>
+            </div>
+
+            <!-- Training & Study (moved to right of Charts) -->
+            <div class="instrument-card">
+                <div class="instrument-header">
+                    <i class="fas fa-user-graduate"></i> Training & Study
+                </div>
+                <a href="https://www.faa.gov/training_testing/testing/" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-pencil-alt"></i> FAA Testing
+                </a>
+                <a href="https://www.boldmethod.com/" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-chalkboard-teacher"></i> Boldmethod
+                </a>
+                <a href="https://courses.sportys.com/training/portal/home/courses" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-video"></i> Sporty's Courses
+                </a>
+                <a href="https://cessnaflighttraining.kingschools.com/CCF/MainMenu" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-graduation-cap"></i> King Schools
+                </a>
+            </div>
+
+            <!-- Flight Service -->
+            <div class="instrument-card">
+                <div class="instrument-header">
+                    <i class="fas fa-headset"></i> Flight Service
+                </div>
+                <a href="https://www.faa.gov/about/office_org/headquarters_offices/ato/service_units/systemops/fs/" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-phone"></i> Flight Service Stations
+                </a>
+                <a href="https://www.faa.gov/air_traffic/flight_info/aeronav/digital_products/dtpp/" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-file-pdf"></i> Terminal Procedures
+                </a>
+            </div>
+
+            <!-- Quick Tools (moved to right of Flight Service) -->
+            <div class="instrument-card">
+                <div class="instrument-header">
+                    <i class="fas fa-tools"></i> Quick Tools
+                </div>
+                <a href="https://www.aopa.org/go-fly/aircraft-and-ownership/buying-an-aircraft/aircraft-valuation" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-plane"></i> AOPA Resources
+                </a>
+                <a href="https://www.liveatc.net/" target="_blank" rel="noopener noreferrer" class="resource-btn">
+                    <i class="fas fa-broadcast-tower"></i> LiveATC
+                </a>
+            </div>
+        </div>
+
+        <!-- Weight & Balance Calculator -->
+        <div class="instrument-card" style="margin-top: 40px;">
+            <div class="instrument-header">
+                <i class="fas fa-balance-scale"></i> Weight & Balance (Cessna 172)
+            </div>
+            
+            <div class="wb-container">
+                <table id="weight-balance-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Weight (lbs)</th>
+                            <th>Arm (in)</th>
+                            <th>Moment (lb-in)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Empty Weight</strong></td>
+                            <td><input type="number" id="empty-weight" placeholder="1650" aria-label="Empty weight"></td>
+                            <td><input type="number" step="0.01" id="empty-arm" placeholder="39.5" aria-label="Empty arm"></td>
+                            <td id="empty-moment">0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Pilots (Front Seat)</td>
+                            <td><input type="number" id="pilot-weight" placeholder="340" aria-label="Pilot weight"></td>
+                            <td><input type="number" step="0.01" id="pilot-arm" placeholder="37.0" aria-label="Pilot arm"></td>
+                            <td id="pilot-moment">0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Passengers (Rear Seat)</td>
+                            <td><input type="number" id="passenger-weight" placeholder="0" aria-label="Passenger weight"></td>
+                            <td><input type="number" step="0.01" id="passenger-arm" placeholder="73.0" aria-label="Passenger arm"></td>
+                            <td id="passenger-moment">0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Baggage Area</td>
+                            <td><input type="number" id="baggage-weight" placeholder="0" aria-label="Baggage weight"></td>
+                            <td><input type="number" step="0.01" id="baggage-arm" placeholder="95.0" aria-label="Baggage arm"></td>
+                            <td id="baggage-moment">0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Fuel (Main Tanks)</td>
+                            <td><input type="number" id="fuel-weight" placeholder="300" aria-label="Fuel weight"></td>
+                            <td><input type="number" step="0.01" id="fuel-arm" placeholder="48.0" aria-label="Fuel arm"></td>
+                            <td id="fuel-moment">0.00</td>
+                        </tr>
+                        <tr style="border-top: 3px solid var(--accent-color); background: var(--card-bg);">
+                            <td><strong>Ramp Weight</strong></td>
+                            <td id="ramp-weight" style="font-weight:bold;">0.00</td>
+                            <td id="ramp-cg" style="font-weight:bold;">0.00</td>
+                            <td id="ramp-moment" style="font-weight:bold;">0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Less Startup/Taxi</td>
+                            <td><input type="number" id="startup-weight" placeholder="12" aria-label="Startup fuel burn"></td>
+                            <td>Fuel Arm</td>
+                            <td id="startup-moment">0.00</td>
+                        </tr>
+                        <tr style="background: var(--card-bg);">
+                            <td><strong>Takeoff Weight</strong></td>
+                            <td id="takeoff-weight" style="font-weight:bold;">0.00</td>
+                            <td id="takeoff-cg" style="font-weight:bold;">0.00</td>
+                            <td id="takeoff-moment" style="font-weight:bold;">0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Less Fuel Burned</td>
+                            <td><input type="number" id="fuel-burn" placeholder="60" aria-label="Fuel burned"></td>
+                            <td>Fuel Arm</td>
+                            <td id="burned-moment">0.00</td>
+                        </tr>
+                        <tr style="background: var(--card-bg);">
+                            <td><strong>Landing Weight</strong></td>
+                            <td id="landing-weight" style="font-weight:bold;">0.00</td>
+                            <td id="landing-cg" style="font-weight:bold;">0.00</td>
+                            <td id="landing-moment" style="font-weight:bold;">0.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <button onclick="calculateWeightAndBalance()" class="calc-btn" style="width: auto; padding: 12px 40px;">
+                    <i class="fas fa-calculator"></i> Calculate W&B
+                </button>
+            </div>
+        </div>
+
+        <!-- Pre-Flight Checklist -->
+        <div class="content" style="margin-top: 40px;">
+            <div class="instrument-header">
+                <i class="fas fa-clipboard-check"></i> Pre-Flight Checklist (C172)
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div>
+                    <h4 style="color: var(--accent-color); margin-bottom: 15px; border-bottom: 2px solid var(--accent-color); padding-bottom: 8px;">
+                        <i class="fas fa-door-open"></i> Cabin
+                    </h4>
+                    <div class="checklist-item" onclick="toggleChecklistItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+                        <div class="checklist-box"><i class="fas fa-check" style="font-size:0.7rem; display:none;"></i></div>
+                        <span>AROW Documents - Check</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleChecklistItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+                        <div class="checklist-box"><i class="fas fa-check" style="font-size:0.7rem; display:none;"></i></div>
+                        <span>Control Lock - Remove</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleChecklistItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+                        <div class="checklist-box"><i class="fas fa-check" style="font-size:0.7rem; display:none;"></i></div>
+                        <span>Ignition - Off</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleChecklistItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+                        <div class="checklist-box"><i class="fas fa-check" style="font-size:0.7rem; display:none;"></i></div>
+                        <span>Master Switch - On</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleChecklistItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+                        <div class="checklist-box"><i class="fas fa-check" style="font-size:0.7rem; display:none;"></i></div>
+                        <span>Fuel Gauges - Check</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: var(--accent-color); margin-bottom: 15px; border-bottom: 2px solid var(--accent-color); padding-bottom: 8px;">
+                        <i class="fas fa-plane"></i> Exterior
+                    </h4>
+                    <div class="checklist-item" onclick="toggleChecklistItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+                        <div class="checklist-box"><i class="fas fa-check" style="font-size:0.7rem; display:none;"></i></div>
+                        <span>Fuel Quantity - Visual Check</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleChecklistItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+                        <div class="checklist-box"><i class="fas fa-check" style="font-size:0.7rem; display:none;"></i></div>
+                        <span>Fuel Sumps - Drain & Check</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleChecklistItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+                        <div class="checklist-box"><i class="fas fa-check" style="font-size:0.7rem; display:none;"></i></div>
+                        <span>Oil Level - 6 to 8 Quarts</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleChecklistItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+                        <div class="checklist-box"><i class="fas fa-check" style="font-size:0.7rem; display:none;"></i></div>
+                        <span>Propeller - Check for Nicks</span>
+                    </div>
+                    <div class="checklist-item" onclick="toggleChecklistItem(this)" role="checkbox" aria-checked="false" tabindex="0">
+                        <div class="checklist-box"><i class="fas fa-check" style="font-size:0.7rem; display:none;"></i></div>
+                        <span>Tires - Check Condition</span>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top: 20px; text-align: center;">
+                <button onclick="resetChecklist()" class="calc-btn" style="width: auto; padding: 10px 30px; background: var(--card-bg); color: var(--text-color); border: 1px solid var(--accent-color);">
+                    <i class="fas fa-redo"></i> Reset Checklist
+                </button>
+            </div>
+        </div>
+        
+    </div>
+    <script src="src/js/global.js"></script>
+    <script src="src/js/pages/aviation.js"></script>
+</body>
+</html>

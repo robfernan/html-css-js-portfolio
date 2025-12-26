@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Robert Fernandez</title>
+    <link rel="icon" href="profile.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="src/css/global.css">
+    <link rel="stylesheet" href="src/css/pages/index.css">
+</head>
+<body>
+    <nav>
+        <div class="title">Robert Fernandez</div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="coding.html">Coding</a>
+            <a href="art.html">Art</a>
+            <a href="aviation.html">Aviation</a>
+            <a href="streaming.html">Streaming</a>
+        </div>
+        <button class="mode-toggle" onclick="toggleMode()">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <header>
+        <h1>Robert Fernandez</h1>
+        <p>I am a <span class="typewriter-text" style="color: var(--accent-color); font-weight: bold;"></span><span class="cursor"></span></p>
+    </header>
+
+    <div class="content">
+        <h2>About Me</h2>
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:30px;">
+            <div style="flex: 1; min-width: 300px;">
+                <p>
+                    I'm a passionate developer with expertise in SFML and Love2D, constantly exploring new ways to bring my ideas to life through code and design. 
+                    Whether it's creating immersive games or building digital art, I strive to blend creativity and functionality in everything I do.
+                </p>
+                <p>
+                    Beyond the screen, I embrace adventure in real life as well—I’m a private pilot in training, a certified scuba diver, an avid fisherman, and a hunter. 
+                </p>
+            </div>
+            
+            <!-- Polaroid Stack Section -->
+            <div style="flex: 1; min-width: 300px;">
+                <div class="media-stack">
+                    <div class="polaroid">
+                        <img src="assets/home/love2d_music_player.png" alt="Love2D">
+                    </div>
+                    <div class="polaroid">
+                        <img src="assets/home/car-art.jpg" alt="Art">
+                    </div>
+                    <div class="polaroid">
+                        <img src="assets/home/comic_book_reader_sfml.png" alt="SFML">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Animated Timeline -->
+        <section class="timeline-section">
+            <h2>Flight Log (My Journey)</h2>
+            <div class="timeline-container">
+                
+                <!-- 2012 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2012</span>
+                        <h3>Started Coding</h3>
+                        <p>Began my journey into programming, exploring C++, game engines, and creative coding.</p>
+                    </div>
+                </div>
+
+                <!-- 2015 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Aug 2015</span>
+                        <h3>Forest Hill Community High School — Digital Design</h3>
+                        <p>Began Digital Design studies focused on graphic and multimedia design fundamentals.</p>
+                    </div>
+                </div>
+
+                <!-- 2018 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">May 2018</span>
+                        <h3>ACE Mentor Program — 2nd Place</h3>
+                        <p>Issued by ACE Mentor Program (Architect, Construction & Engineering).</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">May 2018</span>
+                        <h3>Senior Awards Night</h3>
+                        <p>Recognized at Forest Hill Community High School Senior Awards Night.</p>
+                    </div>
+                </div>
+
+                <!-- 2019 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">May 2019</span>
+                        <h3>High School Graduation</h3>
+                        <p>Completed senior year and left Forest Hill Community High School.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Aug 2019</span>
+                        <h3>Entered Florida Atlantic University</h3>
+                        <p>Started studies at FAU, pursuing interests in software, hardware, and applied computing.</p>
+                    </div>
+                </div>
+
+                <!-- 2020 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Feb 24 2020</span>
+                        <h3>COP3014 — Programming Concepts & Logic</h3>
+                        <p>Completed coursework focusing on programming fundamentals and problem solving.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jul 24 2020</span>
+                        <h3>CDA3201 — Intro to Logic Design</h3>
+                        <p>Completed logic design coursework using Arduino Nano microprocessors and digital circuits.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Aug 16 2020</span>
+                        <h3>CDA3331C — Intro to Microprocessors</h3>
+                        <p>Covered MSP430 programming, MIPS assembly, and embedded C.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2020–2021</span>
+                        <h3>FAU Associations</h3>
+                        <p>Active member of FAU Aerospace Experimental Association and Google Developer Student Club.</p>
+                    </div>
+                </div>
+
+                <!-- 2021 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jan 24 2021</span>
+                        <h3>COP3813 — Intro to Internet Computing</h3>
+                        <p>Introduced to web development concepts (HTML, CSS, JS).</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Dec 5 2021</span>
+                        <h3>COP4045 — Python Programming</h3>
+                        <p>Completed focusing on Python programming and applied scripting techniques.</p>
+                    </div>
+                </div>
+
+                <!-- 2022 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Dec 2022</span>
+                        <h3>Left Florida Atlantic University</h3>
+                        <p>Transitioned to focus on professional projects and independent development.</p>
+                    </div>
+                </div>
+
+                <!-- 2023 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jan 2023</span>
+                        <h3>Learned SFML & Love2D</h3>
+                        <p>Studied SFML and Love2D for game development, informing later prototypes.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Feb 13 2023</span>
+                        <h3>Started SSI Open Water Diver Course</h3>
+                        <p>Began training to pursue recreational scuba certification.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jun 8 2023</span>
+                        <h3>Android Watch Face Studio</h3>
+                        <p>Created a first watch face — a minimalist, readable design for wearable screens.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Dec 31 2023</span>
+                        <h3>Graduate SSI Open Water & Nitrox</h3>
+                        <p>Completed SSI Open Water Diver certification and Enriched Air Nitrox Level 2.</p>
+                    </div>
+                </div>
+
+                <!-- 2024 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Feb 4 2024</span>
+                        <h3>First Discovery Flight</h3>
+                        <p>Completed first discovery flight towards private pilot training.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Dec 21 2024</span>
+                        <h3>First Solo Flight</h3>
+                        <p>Milestone flight as a Student Pilot in the Private Pilot Course.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Dec 26 2024</span>
+                        <h3>Christmas Horror Game (Love2D)</h3>
+                        <p>Released a short horror-themed game built over the holiday.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Dec 29 2024</span>
+                        <h3>XMB Wave Menu</h3>
+                        <p>Built a web-based PlayStation XMB-style home page with wave menu navigation.</p>
+                    </div>
+                </div>
+
+                <!-- 2025 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jan 23 2025</span>
+                        <h3>Desktop Environment UI</h3>
+                        <p>Created a web-based OS-like UI with windowed interfaces.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Apr 8 2025</span>
+                        <h3>Unity - Car Simulation Test</h3>
+                        <p>Built a car simulation prototype to test physics, steering, and suspension.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jul 22 2025</span>
+                        <h3>PSP Development (PSPSDK)</h3>
+                        <p>Implemented custom fonts, polygon drawing, 3D cubes, and control mapping.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jul 25 2025</span>
+                        <h3>PS1 Development (MIPS/Assembly)</h3>
+                        <p>Covered background color, triangles/quads, and Gouraud shading.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Jul 30 2025</span>
+                        <h3>Towered Solos Finished</h3>
+                        <p>Completed full-stop landings and taxi-backs at Ft Pierce.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Aug 28 2025</span>
+                        <h3>Hopeless Catch — Game Jam</h3>
+                        <p>Released the demo for the Fishing Horror Game Jam.</p>
+                        <p><a href="https://mungdaal321.itch.io/hopeless-catch" target="_blank" style="color: var(--accent-color); font-weight: bold;">Play on itch.io →</a></p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Sep 3 2025</span>
+                        <h3>Defold Music Player</h3>
+                        <p>Released a Defold-based music player demo showcasing UI features.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Sep 7 2025</span>
+                        <h3>AviationPro Launch</h3>
+                        <p>Released AviationPro — a professional-grade flight planning suite.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <h2 style="margin-top: 40px; text-align: center;">Featured Projects</h2>
+        <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 20px;">
+            <div style="padding: 20px; border: 1px solid var(--accent-color); border-radius: 5px; background-color: rgba(255, 255, 255, 0.05);">
+                <h3 style="margin-top: 0; color: var(--accent-color);">AviationPro — Professional Flight Planning</h3>
+                <p>Production-grade aviation software built with React, TypeScript, and Tailwind CSS. Features advanced flight planning and weather tools.</p>
+                <p><a href="https://github.com/robfernan/AviationPro" target="_blank" style="color: var(--accent-color); font-weight: bold;">View on GitHub →</a></p>
+            </div>
+            
+            <div style="padding: 20px; border: 1px solid var(--accent-color); border-radius: 5px; background-color: rgba(255, 255, 255, 0.05);">
+                <h3 style="margin-top: 0; color: var(--accent-color);">Hopeless Catch — Pixel Art Fishing Horror Game</h3>
+                <p>A peaceful fishing adventure with a subtle secret. Published game featuring atmospheric storytelling and pixel art.</p>
+                <p><a href="https://mungdaal321.itch.io/hopeless-catch" target="_blank" style="color: var(--accent-color); font-weight: bold;">Play on itch.io →</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="src/js/global.js"></script>
+    <script src="src/js/pages/index.js"></script>
+</body>
+</html>

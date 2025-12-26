@@ -1,0 +1,413 @@
+/* Aviation-Specific Styles Only */
+
+/* Dashboard Grid */
+.aviation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .aviation-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Instrument Cards */
+.instrument-card {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.instrument-card:hover {
+    transform: translateY(-5px);
+}
+
+.instrument-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--timeline-line);
+    padding-bottom: 10px;
+    color: var(--heading-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Calculator Inputs */
+.calc-row {
+    margin-bottom: 15px;
+}
+
+.calc-row label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.calc-row input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--accent-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.calc-row input:focus {
+    outline: none;
+    border-color: var(--heading-color);
+    box-shadow: 0 0 0 2px rgba(255, 165, 0, 0.2);
+}
+
+.calc-btn {
+    width: 100%;
+    background: var(--accent-color);
+    color: var(--background-color);
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.calc-btn:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+
+.calc-btn:active {
+    transform: scale(0.98);
+}
+
+.calc-result {
+    margin-top: 15px;
+    padding: 12px;
+    border-left: 4px solid var(--accent-color);
+    background: rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    border-radius: 5px;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Weight & Balance Table */
+.wb-container {
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+th {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    padding: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+td {
+    border: 1px solid var(--timeline-line);
+    padding: 10px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+td input {
+    width: 90%;
+    padding: 6px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--accent-color);
+    color: var(--text-color);
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+td input:focus {
+    outline: none;
+    border-color: var(--heading-color);
+}
+
+/* METAR Weather Widget */
+.metar-widget {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--accent-color);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    max-width: 500px;
+    margin: 0 auto 20px;
+}
+
+.metar-widget h3 {
+    margin: 0 0 8px 0;
+    color: var(--heading-color);
+}
+
+#metar-raw {
+    font-family: 'Courier New', monospace;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.flight-category {
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #000;
+    background: #2ecc71;
+    white-space: nowrap;
+}
+
+.demo-badge {
+    display: inline-block;
+    background: rgba(255, 165, 0, 0.2);
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Checklist */
+.checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--timeline-line);
+    cursor: pointer;
+    transition: opacity 0.3s;
+    user-select: none;
+}
+
+.checklist-item:hover {
+    opacity: 0.8;
+}
+
+.checklist-item.checked {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.checklist-box {
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--accent-color);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background-color 0.2s;
+}
+
+.checklist-item.checked .checklist-box {
+    background-color: var(--accent-color);
+}
+
+.checklist-item.checked .checklist-box i {
+    color: var(--background-color);
+}
+
+/* Resource Buttons */
+.resource-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    text-align: center;
+    border: 1px solid var(--accent-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-weight: 500;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.resource-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.resource-btn i {
+    margin-right: 8px;
+}
+
+/* Status Badge */
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.8rem;
+    }
+
+    td input {
+        width: 100%;
+        font-size: 0.85rem;
+    }
+}
+
+
+/* METAR Widget Container */
+.metar-embed-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    background: var(--background-color);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--accent-color);
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 20px;
+    overflow: hidden;
+}
+
+/* METAR Link Styling */
+#metartaf-aviation {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    text-decoration: none !important;
+}
+
+#metartaf-aviation,
+#metartaf-aviation:hover,
+#metartaf-aviation:active,
+#metartaf-aviation:focus {
+    text-decoration: none !important;
+}
+
+/* Ensure embedded content respects container */
+.metar-embed-container a > * {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+@media (max-width: 768px) {
+    .metar-embed-container {
+        padding: 15px;
+    }
+}
+
+
+/* Live METAR Widget Styling */
+.metar-widget {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--accent-color);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.metar-widget h3 {
+    margin: 0 0 8px 0;
+    color: var(--heading-color);
+    font-size: 1.1rem;
+}
+
+.metar-widget p {
+    margin: 0 0 15px 0;
+}
+
+.metar-link {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    text-decoration: none !important;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff !important;
+    background-color: #000000;
+    transition: background-color 350ms;
+}
+
+.metar-link:hover,
+.metar-link:active,
+.metar-link:focus {
+    background-color: #111 !important;
+    text-decoration: none !important;
+}
+
+/* Ensure embedded content respects container */
+.metar-link > * {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+@media (max-width: 768px) {
+    .metar-widget {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .metar-link {
+        max-width: 100%;
+    }
+}

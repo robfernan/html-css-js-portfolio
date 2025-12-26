@@ -1,0 +1,203 @@
+/* Header */
+header {
+    text-align: center;
+    padding: 10px 20px 0px;
+    margin-top: 60px;
+}
+
+header h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--heading-color);
+    margin: 0;
+}
+
+header p {
+    font-size: 1.25rem;
+    margin: 5px 0;
+}
+
+/* Main Section */
+main {
+    max-width: 1200px;
+    margin: 20px auto 0;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+main h2 {
+    color: var(--heading-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+/* Streaming Layout */
+.streaming-layout {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.youtube, .twitch {
+    flex: 1;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+/* Thumbnails */
+.thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+.button:hover {
+    background-color: var(--background-color);
+    color: var(--accent-color);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Icons */
+.icons {
+    margin-top: 15px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.icons a {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+.icons a:hover {
+    color: var(--text-color);
+    transform: scale(1.2);
+}
+
+/* Popular Videos Section */
+.popular-content {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.popular-content h2 { color: var(--heading-color); margin-bottom: 15px; }
+.category {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.content-thumbnails {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.thumbnail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    min-height: 250px;
+}
+.thumbnail-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.thumbnail-item img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.thumbnail-description {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    text-align: center;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+    }
+    nav .title {
+        text-align: center;
+        flex-basis: 100%;
+        margin-bottom: 10px;
+    }
+    nav .links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .mode-toggle {
+        margin-top: 10px;
+        flex-basis: 100%;
+        justify-content: center;
+    }
+    header {
+        padding: 50px 20px 0px;
+        margin-top: 69px;
+    }
+    header h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+    }
+    header p {
+        font-size: 1rem;
+    }
+    main {
+        margin-top: 10px;
+        padding: 15px;
+    }
+    .streaming-layout {
+        flex-direction: column;
+    }
+    .thumbnail-item {
+        width: 120px;
+        min-height: 200px;
+    }
+    .thumbnail-description {
+        font-size: 0.8rem;
+        min-height: 30px;
+    }
+    .category {
+        text-align: center;
+    }
+}
