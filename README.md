@@ -2,11 +2,13 @@
 
 > **Work in Progress** - A comprehensive multi-page portfolio showcasing my journey as a developer, artist, pilot, and content creator.
 
-![Portfolio Preview](assets/home/love2d_music_player.png)
+![Portfolio Preview](screenshots/portfolio-preview.png)
 
 ## 🚀 Live Demo
 
-[View Live Website](https://your-username.github.io/portfolio-html-css-js) <!-- Update with your actual GitHub Pages URL -->
+[View Live Website](https://robfernan.github.io/html-css-js-portfolio) <!-- Will be live once GitHub Pages is enabled -->
+
+**Repository**: [https://github.com/robfernan/html-css-js-portfolio](https://github.com/robfernan/html-css-js-portfolio)
 
 ## 📋 Table of Contents
 
@@ -19,7 +21,6 @@
 - [Project Structure](#project-structure)
 - [Key Learnings](#key-learnings)
 - [Future Enhancements](#future-enhancements)
-- [Contact](#contact)
 
 ## 🎯 About
 
@@ -129,8 +130,8 @@ The website features 4 carefully crafted themes, each with its own personality:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/portfolio-html-css-js.git
-   cd portfolio-html-css-js
+   git clone https://github.com/robfernan/html-css-js-portfolio.git
+   cd html-css-js-portfolio
    ```
 
 2. **Open in browser**
@@ -148,7 +149,7 @@ The website features 4 carefully crafted themes, each with its own personality:
 ## 📁 Project Structure
 
 ```
-portfolio-html-css-js/
+html-css-js-portfolio/
 ├── index.html              # Homepage
 ├── coding.html             # Projects showcase
 ├── art.html               # Art portfolio
@@ -210,29 +211,25 @@ This project helped me master:
 
 ## 🔮 Future Enhancements
 
-- [ ] Add more interactive animations
+- [ ] Add more interactive animations and micro-interactions
 - [ ] Implement service worker for offline functionality
 - [ ] Add contact form with backend integration
 - [ ] Create blog section for technical articles
 - [ ] Add more aviation tools and calculators
 - [ ] Implement lazy loading for images
 - [ ] Add unit tests for JavaScript functions
+- [ ] Create additional theme variations
+- [ ] Add keyboard navigation support
+- [ ] Implement print-friendly CSS
 
 ## 🌟 Comparison with React Portfolio
 
-This HTML/CSS/JS portfolio demonstrates my foundational web development skills, while my [React/TypeScript/Tailwind Portfolio](https://github.com/your-username/react-portfolio) showcases modern framework expertise. Together, they show my progression and versatility as a developer.
+This HTML/CSS/JS portfolio demonstrates my foundational web development skills, while my [React/TypeScript/Tailwind Portfolio](https://github.com/robfernan/react-portfolio) showcases modern framework expertise. Together, they show my progression and versatility as a developer.
 
-## 📞 Contact
-
-- **Website**: [robertfernandez.dev](https://your-website.com)
-- **GitHub**: [@your-username](https://github.com/your-username)
-- **LinkedIn**: [Robert Fernandez](https://linkedin.com/in/your-profile)
-- **Email**: your.email@example.com
+**Key Differences:**
+- **This Portfolio**: Vanilla technologies, custom CSS architecture, manual DOM manipulation
+- **React Portfolio**: Component-based architecture, TypeScript safety, utility-first CSS
 
 ---
 
 ⭐ **Star this repo** if you found it helpful or interesting!
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
